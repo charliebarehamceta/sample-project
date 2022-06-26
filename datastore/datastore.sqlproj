@@ -1,0 +1,19 @@
+<Project Sdk="MSBuild.Sdk.SqlProj/2.0.0">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SqlServerVersion>Sql130</SqlServerVersion>
+    <Name>datastore</Name>
+    <ProjectGuid>{685666CE-6693-478A-B5CD-D2F54CD645D8}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+  <ItemGroup>
+    <Folder Include="gen\Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="gen\Scripts\Script.PostDeployment1.sql" />
+  </ItemGroup>
+</Project>

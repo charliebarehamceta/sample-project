@@ -1,0 +1,6 @@
+CREATE TABLE [dbo].[persons_jobs]
+(
+  [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  [PersonName] NVARCHAR(MAX) NOT NULL,
+  [JobName] NVARCHAR(MAX) NOT NULL
+)
