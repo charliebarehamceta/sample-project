@@ -1,0 +1,6 @@
+CREATE TABLE [dbo].[persons]
+(
+  [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  [Name] NVARCHAR(MAX) NOT NULL,
+  [Address] NVARCHAR(MAX)
+)
